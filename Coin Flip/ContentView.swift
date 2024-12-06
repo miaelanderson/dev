@@ -13,18 +13,28 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.pink.opacity(0.2).ignoresSafeArea()
+                Color.white.opacity(0.2).ignoresSafeArea()
                 VStack {
                     Text("Coin Flip!")
-                        .font(.title).bold()
+                        .font(Font.custom("Marker Felt", size: 45))
+                        .padding(45)
+                    Image("real coin").resizable().frame(width: 282, height: 275)
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+                        .padding()
+                    Image("arrow").resizable().frame(width: 100, height: 150)
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+
                     Spacer()
                     NavigationLink("PLAY!!", destination: GameView())
-                        .font(.title).bold()
-                    
+                        .font(Font.custom("Marker Felt", size: 30))
+                        .padding(45)
                 }
             }
         }
         }
+    
 }
 #Preview {
     ContentView()

@@ -13,7 +13,7 @@ struct GameView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Coin Flip!")
+                Text("Tap to flip!")
                     .font(.title).bold()
                 Image("head \(randomValue)")
                     .resizable()
