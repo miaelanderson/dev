@@ -14,10 +14,10 @@ struct GameView: View {
         NavigationView {
             VStack {
                 Text("Tap to flip!")
-                    .font(.title).bold()
+                    .font(Font.custom("Marker Felt", size: 45))
                 Image("head \(randomValue)")
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 250, height: 250)
                     .padding()
                     .onTapGesture {
                         chooseRandom(times: 4)
@@ -25,6 +25,7 @@ struct GameView: View {
                             rotation += 360
                         }
                     }
+                Spacer()
                     .rotationEffect(.degrees(rotation))
                     .rotation3DEffect(.degrees(rotation), axis: (x: 1, y: 1, z: 0))
                 }
