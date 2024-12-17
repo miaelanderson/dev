@@ -27,7 +27,7 @@ struct ContentView: View {
                         .foregroundStyle(.tint)
 
                     Spacer()
-                    NavigationLink("PLAY!!", destination: GameView())
+                    NavigationLink("PLAY!!", destination: GameView()) //brings you to next view
                         .font(Font.custom("Marker Felt", size: 30))
                         .padding(45)
                 }
